@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS public.lista_anime;
+
+CREATE TABLE IF NOT EXISTS public.lista_anime
+(
+    "Unnamed: 0" bigint,
+    titulo_anime text COLLATE pg_catalog."default" NOT NULL,
+    episodios bigint,
+    tipo text COLLATE pg_catalog."default",
+    estado text COLLATE pg_catalog."default",
+    CONSTRAINT lista_anime_pkey PRIMARY KEY (titulo_anime)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.lista_anime
+    OWNER to postgres;
